@@ -1,6 +1,6 @@
 type Block @entity {
   id: ID!
-
+  hash: String
   number: BigInt
   timestamp: Date
 }

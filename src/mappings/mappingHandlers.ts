@@ -12,6 +12,7 @@ export async function handleBlock(block: SubstrateBlock): Promise<void> {
   const record = new Block(number);
   record.number = BigInt(number);
   record.timestamp = timestamp;
+  record.hash = block.hash.toString();
 
   await record.save();
 }
